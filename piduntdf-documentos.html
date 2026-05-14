@@ -43,6 +43,8 @@ a:hover { opacity: 0.7; }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
   padding: 24px 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: 64px;
@@ -60,6 +62,34 @@ a:hover { opacity: 0.7; }
   color: var(--olive);
 }
 .nav-links a.active { color: var(--brand); border-bottom: 1px solid var(--brand); }
+
+.nav-docs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(250, 249, 245, 0.92);
+  color: var(--brand);
+  border: 1px solid rgba(27, 54, 93, 0.22);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  opacity: 1;
+}
+.nav-docs-btn:hover {
+  opacity: 1;
+  background: rgba(27, 54, 93, 0.06);
+  border-color: rgba(27, 54, 93, 0.3);
+}
+.nav-docs-btn.active {
+  opacity: 1;
+  background: rgba(27, 54, 93, 0.08);
+  border-color: rgba(27, 54, 93, 0.34);
+}
 
 .header-section { margin-bottom: 80px; display: flex; flex-direction: column; gap: 48px; }
 .logo-block { display: flex; align-items: center; gap: 200px; }
@@ -160,9 +190,9 @@ a:hover { opacity: 0.7; }
       <a href='index.html#proyecto'>Proyecto</a>
       <a href='index.html#objetivos'>Objetivos</a>
       <a href='piduntdf-integrantes.html'>Equipo</a>
-      <a href='piduntdf-documentos.html' class='active'>Documentos</a>
       <a href='index.html#impacto'>Impacto</a>
     </div>
+    <a class='nav-docs-btn active' href='piduntdf-documentos.html'>Documentos</a>
   </nav>
 
   <header class='header-section'>
@@ -195,4 +225,3 @@ a:hover { opacity: 0.7; }
 
 </body>
 </html>
-
