@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<title>Integrantes — PIDUNTDF</title>
+<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link href='https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@400;500;600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap' rel='stylesheet' />
+<style>
+:root {
+  --bg: #f5f4ed;
+  --surface: #faf9f5;
+  --brand: #1B365D;
+  --cool-gray: #64748b;
+  --cool-border: #e2e8f0;
+  --cool-bg: #f8fafc;
+  --near-black: #141413;
+  --olive: #504e49;
+  --border: #e8e6dc;
+  --serif: 'Source Serif 4', Charter, Georgia, serif;
+  --sans: 'Source Sans 3', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--near-black);
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.shell { max-width: 1080px; margin: 0 auto; padding: 0 40px 120px; }
+
+/* ---------- Navigation ---------- */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 64px;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--olive);
+}
+.nav-links a { color: inherit; text-decoration: none; }
+.nav-links a:hover { color: var(--brand); }
+.nav-links a.active { color: var(--brand); border-bottom: 1px solid var(--brand); }
+
+/* ---------- Section Header ---------- */
+.section-header {
+  margin-bottom: 80px;
+  border-bottom: 1px solid var(--brand);
+  padding-bottom: 24px;
+}
+.section-header h1 {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.section-header p {
+  font-family: var(--sans);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+/* ---------- Grid Layouts ---------- */
+.category-block {
+  margin-bottom: 88px;
+}
+.category-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--cool-gray);
+  letter-spacing: 0.1em;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.category-label::after { content: ''; flex-grow: 1; height: 1px; background: var(--cool-border); }
+
+.member-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.member-card:last-child { border-bottom: 0; }
+
+.member-info h2 { font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+.member-info .title { font-family: var(--sans); font-size: 12px; font-weight: 600; text-transform: uppercase; color: var(--brand); margin-bottom: 12px; }
+.member-info .degree { font-size: 13px; color: var(--olive); font-style: italic; margin-bottom: 16px; }
+.member-bio { font-size: 14.5px; color: var(--near-black); line-height: 1.6; }
+
+/* ---------- Unified Team Grid ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.team-item {
+  padding: 24px;
+  background: var(--cool-bg);
+  border: 1px solid var(--cool-border);
+  border-radius: 4px;
+}
+.team-item h4 { font-size: 16px; margin-bottom: 6px; font-weight: 600; }
+.team-item .tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brand);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  padding: 2px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+.team-item p { font-size: 13.5px; color: var(--olive); line-height: 1.5; }
+
+.footer-row {
+  border-top: 1px solid var(--brand);
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--cool-gray);
+}
+
+ @media (max-width: 800px) {
+  .member-card { grid-template-columns: 1fr; gap: 16px; }
+  .team-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class='shell'>
+  <nav class='nav-bar'>
+    <div class='nav-links'>
+      <a href='index.html'>Inicio</a>
+      <a href='index.html#objetivos'>Objetivos</a>
+      <a href='#' class='active'>Equipo Completo</a>
+      <a href='index.html#impacto'>Impacto</a>
+    </div>
+  </nav>
+
+  <header class='section-header'>
+    <p>Cuerpo de Investigación</p>
+    <h1>Integrantes del Proyecto</h1>
+  </header>
+
+  <section class='category-block'>
+    <div class='category-label'>Dirección y Cuerpo Docente</div>
+    
+    <div class='member-card'>
+      <div class='member-info'>
+        <h2>Dr. Rodrigo Kataishi</h2>
+        <div class='title'>Director del Proyecto</div>
+        <div class='degree'>Investigador Adjunto CONICET · Profesor Asociado UNTDF</div>
+      </div>
+      <div class='member-bio'>
+        Economista industrial especializado en capacidades tecnológicas e innovación en periferias. Dirige la investigación articulando las diversas células temáticas del equipo.
+      </div>
+    </div>
+
+    <div class='team-grid'>
+      <div class='team-item'>
+        <h4>Mg. Cristian Brixner</h4>
+        <span class='tag'>Investigador IDEI · Becario CONICET</span>
+        <p>Analiza la inserción de la industria fueguina en cadenas globales de valor y el impacto de los regímenes de promoción industrial.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Esp. Mabel Silva</h4>
+        <span class='tag'>Investigadora IDEI</span>
+        <p>Aporta el análisis estructural del sector servicios y el turismo como vector de diversificación y desarrollo local.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Prof. Noelia Lobo</h4>
+        <span class='tag'>Investigadora IDEI</span>
+        <p>Enfocada en la enseñanza de la economía y el análisis de los bienes comunes desde marcos teóricos heterodoxos.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Lic. Paulo Lezcano</h4>
+        <span class='tag'>Investigador IDEI</span>
+        <p>Participa en el relevamiento y análisis de la dinámica productiva regional y el sector terciario.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Mg. Marcos Meyer</h4>
+        <span class='tag'>Investigador ICSE</span>
+        <p>Analiza las dimensiones políticas y de gestión pública que condicionan el desarrollo en la Patagonia Sur.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class='category-block'>
+    <div class='category-label'>Investigadores de la Red Nacional e Internacional</div>
+    <div class='team-grid'>
+      <div class='team-item'>
+        <h4>Dr. Hernán Morero</h4>
+        <span class='tag'>UNC · Córdoba</span>
+        <p>Especialista en tramas productivas y economía de la innovación. Referente en el análisis de articulación sectorial.</p>
+      </div>
+      
+      <div class='team-item'>
+        <h4>Dra. Antonela Isoglio</h4>
+        <span class='tag'>UNC · Córdoba</span>
+        <p>Investiga la economía del conocimiento y nuevos sectores estratégicos como el hidrógeno verde.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Dr. Julian Bilmes</h4>
+        <span class='tag'>UNLP · La Plata</span>
+        <p>Especialista en dinámicas internacionales y transiciones socio-económicas en contextos de soberanía en disputa.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Dr. Martin Civitaresi</h4>
+        <span class='tag'>UNRN · Río Negro</span>
+        <p>Aporta una mirada histórica y estructural sobre los procesos de transformación económica regional.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Red PLACTS / UPF</h4>
+        <span class='tag'>Cooperación Externa</span>
+        <p>Articulación con investigadores de la Universitat Pompeu Fabra y el Pensamiento Latinoamericano en Ciencia y Tecnología.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class='category-block'>
+    <div class='category-label'>Asistentes de Investigación y Estudiantes</div>
+    <div class='team-grid'>
+      <div class='team-item'>
+        <h4>Adrián de Antueno</h4>
+        <span class='tag'>Becario CONICET · Maestría Estudios Antárticos</span>
+        <p>Analiza la soberanía y la gestión de recursos estratégicos del Atlántico Sur.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Andressa Disconsi</h4>
+        <span class='tag'>Becaria CONICET · Maestría Estudios Antárticos</span>
+        <p>Estudia las cadenas globales de valor y el impacto del turismo de cruceros en la región.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Sabrina Kizman</h4>
+        <span class='tag'>Becaria CONICET · Maestría Estudios Antárticos</span>
+        <p>Investiga la estructura empresarial y las estrategias de crecimiento en empresas locales del territorio.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Reinaldo Lencina</h4>
+        <span class='tag'>Posgrado · Políticas Públicas</span>
+        <p>Analiza las energías renovables y los desafíos institucionales de la transición energética regional.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Alvaro Ocampo</h4>
+        <span class='tag'>Grado · Lic. en Economía</span>
+        <p>Estudia la soberanía alimentaria y el rol estratégico de la agricultura familiar en la isla.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Ivan Santa Cruz</h4>
+        <span class='tag'>Grado · Lic. en Economía</span>
+        <p>Analiza la producción de hongos comestibles como vector de diversificación productiva local.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Norma Aguirre</h4>
+        <span class='tag'>Grado · Lic. en Economía</span>
+        <p>Enfocada en la dinámica del sector de Energía e Hidrocarburos en Tierra del Fuego.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Mónica Besacho</h4>
+        <span class='tag'>Grado · Lic. en Economía</span>
+        <p>Estudia la estrategia del hidrógeno verde y su potencial impacto en la matriz energética fueguina.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Alexis Pinares</h4>
+        <span class='tag'>Grado · Lic. en Economía</span>
+        <p>Asistente de investigación especializado en el relevamiento de indicadores socio-económicos situados.</p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Dario Igarzabal</h4>
+        <span class='tag'>Grado · Lic. en Economía</span>
+        <p>Asistente de investigación dedicado al procesamiento de datos de tramas productivas regionales.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class='footer-row'>
+    <div>© 2026 PIDUNTDF · Instituto de Desarrollo Económico e Innovación</div>
+    <div>Ushuaia, Tierra del Fuego, Argentina</div>
+  </footer>
+</div>
+
+</body>
+</html>
