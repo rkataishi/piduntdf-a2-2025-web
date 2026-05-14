@@ -354,7 +354,7 @@ a:hover { opacity: 0.7; }
 
  @media (max-width: 900px) {
   .header-section { gap: 24px; }
-  .logo-block { flex-direction: column; align-items: flex-start; }
+  .logo-block { flex-direction: column; align-items: flex-start; gap: 32px; }
   .logo-untdf { width: 112px; left: 0; }
   .subtitle { white-space: normal; padding-left: 0; }
   .subtitle::before { display: none; }
@@ -368,6 +368,30 @@ a:hover { opacity: 0.7; }
   .section-chapter { grid-template-columns: 1fr; gap: 24px; }
   .metrics-row, .cards-grid { grid-template-columns: 1fr 1fr; }
   .impact-item { grid-template-columns: 1fr; gap: 8px; }
+  .nav-links { gap: 20px; flex-wrap: wrap; }
+}
+
+@media (max-width: 600px) {
+  .shell { padding: 0 20px 80px; }
+  body { font-size: 14px; }
+  .nav-bar { padding: 16px 0; margin-bottom: 40px; }
+  .nav-links { gap: 14px; font-size: 11px; }
+  .nav-docs-btn { font-size: 10px; padding: 6px 10px; }
+  .project-title h1 { font-size: 24px; }
+  .subtitle { font-size: 14px; }
+  .header-section { margin-bottom: 48px; gap: 20px; }
+  .metrics-row, .cards-grid { grid-template-columns: 1fr; }
+  .metric { padding: 20px 16px; border-right: 0; border-bottom: 1px solid var(--cool-border); }
+  .metric:last-child { border-bottom: 0; }
+  .metric .val { font-size: 28px; }
+  .content-body h2 { font-size: 22px; }
+  .director-line h3 { font-size: 16px; }
+  .director-line .roles { font-size: 14px; }
+  .card .num { font-size: 22px; }
+  .impact-item { gap: 16px; margin-bottom: 24px; padding-bottom: 24px; }
+  .footer-row { flex-direction: column; gap: 8px; }
+  .team-intro { max-width: 100%; }
+  .back-to-top { left: 12px; bottom: 12px; padding: 10px 12px; font-size: 10px; }
 }
 </style>
 </head>
