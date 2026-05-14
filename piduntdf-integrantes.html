@@ -141,6 +141,29 @@ body {
   border-radius: 3px;
 }
 .team-item p { font-size: 13.5px; color: var(--olive); line-height: 1.5; }
+.team-item .visit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  padding: 9px 14px;
+  border: 1px solid rgba(27, 54, 93, 0.22);
+  border-radius: 999px;
+  background: rgba(250, 249, 245, 0.92);
+  color: var(--brand);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.team-item .visit-btn:hover {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
 
 .footer-row {
   border-top: 1px solid var(--brand);
@@ -199,25 +222,25 @@ body {
       <div class='team-item'>
         <h4>Mg. Marcos Meyer</h4>
         <span class='tag'>Investigador ICSE</span>
-        <p>Analiza las dimensiones políticas y de gestión pública que condicionan el desarrollo en la Patagonia Sur.</p>
+        <p>Analiza las dimensiones políticas y de gestión pública que promueven el desarrollo en la Patagonia Sur.</p>
       </div>
 
       <div class='team-item'>
         <h4>Prof. Noelia Lobo</h4>
         <span class='tag'>Investigadora IDEI</span>
-        <p>Enfocada en la enseñanza de la economía y el análisis de los bienes comunes desde marcos teóricos heterodoxos.</p>
+        <p>Enfocada en problemas epistemológicos y ontológicos de los problemas económicos, la enseñanza de la economía y el análisis de marcos teóricos de la disciplina.</p>
       </div>
 
       <div class='team-item'>
         <h4>Lic. Paulo Lezcano</h4>
         <span class='tag'>Investigador IDEI</span>
-        <p>Participa en el relevamiento y análisis de la dinámica productiva regional, con énfasis en turismo, servicios y entramados locales.</p>
+        <p>Participa en el análisis conceptual acerca del tiempo libre, el turismo, los servicios asociados y su significancia para el desarrollo del territorio y del sector.</p>
       </div>
 
       <div class='team-item'>
         <h4>Esp. Mabel Silva</h4>
         <span class='tag'>Investigadora IDEI</span>
-        <p>Aporta el análisis estructural del sector servicios y el turismo como vector de diversificación y desarrollo local.</p>
+        <p>Aporta el análisis del sector de turismo como vector de desarrollo local desde la problematización de los bienes comunes.</p>
       </div>
     </div>
   </section>
@@ -230,11 +253,23 @@ body {
         <span class='tag'>UNC · Córdoba</span>
         <p>Especialista en tramas productivas, economía de la innovación, cambio técnico y desarrollo. Referente en el análisis de articulación sectorial.</p>
       </div>
+
+      <div class='team-item'>
+        <h4>Dr. Martín Civitaresi</h4>
+        <span class='tag'>UNRN · Río Negro</span>
+        <p>Aporta una mirada histórica y estructural sobre procesos sociales, territoriales y de transformación económica regional.</p>
+      </div>
       
       <div class='team-item'>
-        <h4>Dra. Antonela Isoglio</h4>
-        <span class='tag'>UNC · Córdoba</span>
-        <p>Investiga la economía del conocimiento y nuevos sectores estratégicos, con énfasis en hidrógeno verde.</p>
+        <h4>Dr. Julián Bilmes</h4>
+        <span class='tag'>UNLP · La Plata</span>
+        <p>Especialista en dinámicas internacionales y transiciones socio-económicas en contextos de soberanía en disputa. Con foco en estudios de energía, transición energética y Atlántico Sur. </p>
+      </div>
+
+      <div class='team-item'>
+        <h4>Mg. Mahuen Gallo</h4>
+        <span class='tag'>UNCOMA · Viedma</span>
+        <p>Investiga procesos de desarrollo en la Patagonia, asimetrías territoriales, fragmentación productiva y configuraciones de enclave.</p>
       </div>
 
       <div class='team-item'>
@@ -246,26 +281,19 @@ body {
       <div class='team-item'>
         <h4>Dr. Andrés Carbel</h4>
         <span class='tag'>UNLP · Buenos Aires</span>
-        <p>Aporta al análisis estratégico de las políticas públicas, las capacidades institucionales y los procesos de cambio estructural.</p>
+        <p>Aporta al análisis estratégico de las políticas públicas, las capacidades institucionales y los procesos de cambio estructural en relación a las políticas de CyT y su relación con el mundo productivo.</p>
       </div>
 
       <div class='team-item'>
-        <h4>Mg. Mahuen Gallo</h4>
-        <span class='tag'>Universidad Nacional del Comahue · Viedma</span>
-        <p>Investiga procesos de desarrollo en la Patagonia, asimetrías territoriales, fragmentación productiva y configuraciones de enclave.</p>
+        <h4>Dra. Antonela Isoglio</h4>
+        <span class='tag'>UNC · Córdoba</span>
+        <p>Investiga la economía del conocimiento y nuevos sectores estratégicos, con énfasis en hidrógeno verde.</p>
       </div>
 
-      <div class='team-item'>
-        <h4>Dr. Martín Civitaresi</h4>
-        <span class='tag'>UNRN · Río Negro</span>
-        <p>Aporta una mirada histórica y estructural sobre procesos sociales, territoriales y de transformación económica regional.</p>
-      </div>
 
-      <div class='team-item'>
-        <h4>Dr. Julián Bilmes</h4>
-        <span class='tag'>UNLP · La Plata</span>
-        <p>Especialista en dinámicas internacionales y transiciones socio-económicas en contextos de soberanía en disputa.</p>
-      </div>
+
+
+
     </div>
   </section>
 
@@ -285,14 +313,15 @@ body {
     <div class='team-grid'>
       <div class='team-item'>
         <h4>Red PLACTS</h4>
-        <span class='tag'>Pensamiento Latinoamericano en Ciencia, Tecnología y Sociedad</span>
+        <span class='tag'>Red de Pensamiento Latinoamericano en Ciencia, Tecnología y Sociedad</span>
         <p>Constituye un espacio de articulación académica orientado a discutir las relaciones entre ciencia, tecnología, desarrollo, soberanía y planificación en contextos periféricos.</p>
+        <a class='visit-btn' href='https://redplacts.org' target='_blank' rel='noopener noreferrer'>Visitar sitio web</a>
       </div>
     </div>
   </section>
 
   <section class='category-block'>
-    <div class='category-label'>Asistentes de Investigación y Estudiantes</div>
+    <div class='category-label'>Estudiantes de Posgrado</div>
     <div class='team-grid'>
       <div class='team-item'>
         <h4>Adrián de Antueno</h4>
@@ -314,10 +343,15 @@ body {
 
       <div class='team-item'>
         <h4>Reinaldo Lencina</h4>
-        <span class='tag'>ICSE · Lic. en Ciencia Política</span>
+        <span class='tag'>ICSE · Maestría en Política Pública para el Desarrollo Territorial</span>
         <p>Analiza las energías renovables y los desafíos institucionales de la transición energética regional.</p>
       </div>
+    </div>
+  </section>
 
+  <section class='category-block'>
+    <div class='category-label'>Estudiantes de Grado</div>
+    <div class='team-grid'>
       <div class='team-item'>
         <h4>Álvaro Ocampo</h4>
         <span class='tag'>IDEI · Río Grande · Lic. en Economía</span>
