@@ -554,7 +554,7 @@ AI Chat
 The dashboard includes an optional AI chat panel powered by the Vercel AI Gateway. The same functionality is available directly from the CLI via the chat command. Set these environment variables to enable AI chat:
 
 export AI_GATEWAY_API_KEY=gw_your_key_here
-export AI_GATEWAY_MODEL=anthropic/claude-sonnet-4.6           # optional, this is the default
+export AI_GATEWAY_MODEL=your-provider/your-model              # optional
 export AI_GATEWAY_URL=https://ai-gateway.vercel.sh           # optional, this is the default
 CLI usage:
 
@@ -896,15 +896,9 @@ AI Coding Assistants (recommended)
 Add the skill to your AI coding assistant for richer context:
 
 npx skills add vercel-labs/agent-browser
-This works with Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Goose, OpenCode, and Windsurf. The skill is fetched from the repository, so it stays up to date automatically -- do not copy SKILL.md from node_modules as it will become stale.
+This works with Codex, Cursor, Gemini CLI, GitHub Copilot, Goose, OpenCode, and Windsurf. The skill is fetched from the repository, so it stays up to date automatically -- do not copy SKILL.md from node_modules as it will become stale.
 
-Claude Code
-Install as a Claude Code skill:
-
-npx skills add vercel-labs/agent-browser
-This adds a thin discovery stub at .claude/skills/agent-browser/SKILL.md. The stub is intentionally minimal — it points Claude Code at agent-browser skills get core to load the actual workflow content at runtime. This way the instructions always match the installed CLI version instead of going stale between releases.
-
-AGENTS.md / CLAUDE.md
+AGENTS.md
 For more consistent results, add to your project or global instructions file:
 
 ## Browser Automation
